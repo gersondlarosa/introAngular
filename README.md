@@ -135,7 +135,7 @@ Recordemos que debemos de poner el popper antes del bootstrap.min
 
   Crearemos una carpeta nueva que se llame header dentro de la carpeta crearemos un header.coponent.ts
 
-      ![headercoponent](https://user-images.githubusercontent.com/68626555/174692101-f02e3562-fe5c-47e7-855c-2690a66ef5fe.png)
+![headercoponent](https://user-images.githubusercontent.com/68626555/174692101-f02e3562-fe5c-47e7-855c-2690a66ef5fe.png)
 
 
   Despues crearemos un comonente con @Component y le pondremos un selector y un template y importaremos el componenente de @angular/core aun no lo podemos pcupar ya que hay que llamarlo en el app.module.ts
@@ -158,7 +158,7 @@ Recordemos que debemos de poner el popper antes del bootstrap.min
 
   Abriremos nuestro app.module y lo importalemos como al header component y en declarations lo mandamos llamar
 
-       ![app module ts](https://user-images.githubusercontent.com/68626555/174692606-ca71b549-9ca3-42af-9a17-23b9c45b085c.png)
+![app module ts](https://user-images.githubusercontent.com/68626555/174692606-ca71b549-9ca3-42af-9a17-23b9c45b085c.png)
 
    ya que lo tenemos declarado lo que teniamos en nuestro header component lo mandamos llamar en nuestro template y declaramos un en nuestro herader component una variablde de tipo string llamada title y le pondremos de esta manera title: string = 'App Angular'
 
@@ -209,13 +209,13 @@ Recordemos que debemos de poner el popper antes del bootstrap.min
             }
 
 
-      ![template](https://user-images.githubusercontent.com/68626555/174693182-9d9f8ab4-99eb-4943-bfe5-12de5eb20f8d.png)
+![template](https://user-images.githubusercontent.com/68626555/174693182-9d9f8ab4-99eb-4943-bfe5-12de5eb20f8d.png)
 
 
   Levantamos nuestro proyecto con ng serve -o y listo se tiene que ver de la sigueinte manera
 
 
-         ![run](https://user-images.githubusercontent.com/68626555/174693194-8411e42a-4ff0-44b7-a4e2-a974e6883f4a.png)
+![run](https://user-images.githubusercontent.com/68626555/174693194-8411e42a-4ff0-44b7-a4e2-a974e6883f4a.png)
 
 
 
