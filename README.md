@@ -172,4 +172,90 @@ Quitamos  ,styleUrls: ['./clientes.component.css'] ya que si no lo quitamos se q
   
 ![2022-05-25 20_12_24-clientes component ts — C__Users_linck_OneDrive_Documentos_GitHub_introAngular_c](https://user-images.githubusercontent.com/68626555/170394811-972c8381-dbd8-423d-8653-c0f8fd890089.png)
 
+## Crando nuevo componente Header component
+
+Crearemos una carpeta nueva que se llame header dentro de la carpeta crearemos un header.coponent.ts
+
+![headercoponent](https://user-images.githubusercontent.com/68626555/174692101-f02e3562-fe5c-47e7-855c-2690a66ef5fe.png)
+
+
+Despues crearemos un comonente con @Component y le pondremos un selector y un template y importaremos el componenente de @angular/core aun no lo podemos pcupar ya que hay que llamarlo en el app.module.ts
+
+      import {Component} from '@angular/core';
+
+      @Component({
+        selector: 'app-header',
+        template: `
+                  App Angular
+        `
+
+      })
+      
+      export class HeaderComponent{
+      title: string = 'App Angular'
+       }
+      
+ ## Importando el header component
+ 
+ Abriremos nuestro app.module y lo importalemos como al header component y en declarations lo mandamos llamar
+ 
+ ![app module ts](https://user-images.githubusercontent.com/68626555/174692606-ca71b549-9ca3-42af-9a17-23b9c45b085c.png)
+ 
+ ya que lo tenemos declarado lo que teniamos en nuestro header component lo mandamos llamar en nuestro template y declaramos un en nuestro herader component una variablde de tipo string llamada title y le pondremos de esta manera title: string = 'App Angular'
+ 
+       import {Component} from '@angular/core';
+
+      @Component({
+        selector: 'app-header',
+        template: `
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">{{title}}</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-                    expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        `
+      })
+      export class HeaderComponent{
+      title: string = 'App Angular'
+      }
+
+
+![template](https://user-images.githubusercontent.com/68626555/174693182-9d9f8ab4-99eb-4943-bfe5-12de5eb20f8d.png)
+
+      
+   Levantamos nuestro proyecto con ng serve -o y listo se tiene que ver de la sigueinte manera
+   
+   
+   ![run](https://user-images.githubusercontent.com/68626555/174693194-8411e42a-4ff0-44b7-a4e2-a974e6883f4a.png)
+
 
