@@ -219,6 +219,123 @@ Recordemos que debemos de poner el popper antes del bootstrap.min
 
 
 
+## Separar el template del componente con templateUrl
+
+Lo que aremos es quitar el  template y lo remplazaremos por el templateUrl, tendremos que crear un html que se llame header.component.html y lo que teniamos en el 
+template de header component lo movemermos al html
+
+
+![html](https://user-images.githubusercontent.com/68626555/174907425-ccf0cddc-6d4f-458c-96fe-61f24630fe8e.png)
+
+y lo que teneiamo en el templa lo movemos al header.htmltcomponene.
+
+
+![template02](https://user-images.githubusercontent.com/68626555/174907520-b94e917e-9c58-466f-a9cb-7c7ecd37943d.png)
+
+
+y por ultimo lo mandamos a llamar con su selector que es app-header que esta en el header.component.ts que es este "selector: 'app-header'" 
+
+![selector](https://user-images.githubusercontent.com/68626555/174907856-586d7230-c17c-4c76-8c90-0c14e0796ff7.png)
+
+## Creando footer.component
+
+Abrimos nuestra consola y creamos noestro footer component
+
+![footercmd](https://user-images.githubusercontent.com/68626555/174917373-0719f97b-cd3e-440b-b7e9-121d3c1f5227.png)
+
+se creara la carpeta de footer en nuestro proyecto y se vera de la siguiente manera
+
+![01](https://user-images.githubusercontent.com/68626555/174917439-313c9e0b-59bd-480b-a780-734b18e7daa9.png)
+
+Luego ingresamos a footer desde el footer component
+
+![footercomponent](https://user-images.githubusercontent.com/68626555/174918195-c86c45e5-832a-4816-a19e-8b3c2d7d4519.png)
+
+
+abriremos el footercoponent.ts marcara un erro esto es por que al crearlo te toma el . solo hay que quitarlo
+
+![footercomponent ts](https://user-images.githubusercontent.com/68626555/174918303-bca75e74-55e6-489e-a3e4-940d0f3d2fa7.png)
+
+hay que crear el footer.component.html y ponenmos nuestras etiquestas de footer
+
+            <footer class="bg-dark rounded-top">
+              <div class="">
+                <p>
+                  &copy;{{autor.nombre + '' + autor.apellido}}
+                </p>
+              </div>
+            </footer>
+
+
+![footer](https://user-images.githubusercontent.com/68626555/174918583-671e0361-c009-43dd-b309-279c2b67e6cc.png)
+
+y lo declaramos en el app.module.ts para que se pueda ver nuestro template
+
+![declaracion](https://user-images.githubusercontent.com/68626555/174918746-4c6d1b7a-baa2-4234-b56b-414dddda7505.png)
+
+y lo pasamos a nuestra vista de app.component.html
+
+
+![selectorfooter](https://user-images.githubusercontent.com/68626555/174918918-84732722-5a41-4818-8f7f-e5c8a0e7f3ac.png)
+
+      <footer class="footer bg-dark rounded-top text-center">
+        <div class="container py-2">
+          <p class="text-white my-2">
+            &copy;{{autor.nombre + '' + autor.apellido}}
+          </p>
+        </div>
+      </footer>
+
+se crea css de footer y se agrega al app.component como un arreglo que agregara mas css
+
+
+            import { Component } from '@angular/core';
+
+            @Component({
+              selector: 'app-root',
+              templateUrl: './app.component.html',
+              styleUrls: ['./app.component.css']
+            })
+            export class AppComponent {
+              title = 'Bienveniso a Angular';
+
+              curso: string = 'Curso de Spring 5 con Angular ';
+              profesor: string = 'Joel Gerson Flores'
+            }
+
+
+      
+                  .footer{
+              position: absolute;
+              bottom:  0px;
+              height: 60px;
+              width: 100%;
+
+            }
+            
+   y el app component se debe de ver de la sigueinte manera
+   
+            
+      <app-header></app-header>
+      <div class="container">
+        <h1>{{title}}</h1>
+        <ul>
+          <li>{{curso}}</li>
+          <li>Profesor {{profesor}}</li>
+        </ul>
+      </div>
+      <app-footer></app-footer>
+
+ 
+al desplegar tu proyecto se ve de la sigueitne manera
+
+
+
+
+![doom](https://user-images.githubusercontent.com/68626555/174920353-1e129abe-7a31-40b7-ae5c-7420c0af001e.png)
+
+
+
 
 
 # Creando el componente clientes.component
