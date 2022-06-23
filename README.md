@@ -335,6 +335,53 @@ al desplegar tu proyecto se ve de la sigueitne manera
 ![doom](https://user-images.githubusercontent.com/68626555/174920353-1e129abe-7a31-40b7-ae5c-7420c0af001e.png)
 
 
+## Directiva estructural *ngFo
+
+Para crear un nuevo componente  dentro de nuestro proyecto crearemos con `ng g c directiva` y creara todoso los componentes y la carpeta
+
+
+![1](https://user-images.githubusercontent.com/68626555/175198535-de06d767-dc7c-4a6f-b97c-073ed0edcdf3.png)
+
+![3](https://user-images.githubusercontent.com/68626555/175198636-b1aaaf52-e11f-4e80-96ef-b042bd784ba0.png)
+
+de igual forma ya no importara el Directivas component enapp.module
+
+![2](https://user-images.githubusercontent.com/68626555/175198600-9788c3a5-2ae1-49d6-bc3a-2c987512e9f1.png)
+
+
+
+En nuetro directiva.component creamos un atributo y lo llamremos lista corsoy lo meteremos eun un arreglo
+
+      listaCurso: string[] = ['Type','JavaScript', 'Java SE', 'C#', 'PHP'];
+      
+      ![5](https://user-images.githubusercontent.com/68626555/175199584-67b05bac-7c5c-4807-8be3-b894aaa44842.png)
+
+      
+      
+
+En nuestro directiva.component.html lo mandaremos crearemos una una lista en la cual agregaremos el `ngFor`
+
+          <div class="card">
+            <div class="card-header">
+                Lista de cursos
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let curso of listaCurso">{{ curso }}</li>
+              </ul>
+           </div>
+
+
+   ![6](https://user-images.githubusercontent.com/68626555/175199633-2343630c-bde2-495a-974d-37eab7223cee.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
