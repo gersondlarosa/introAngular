@@ -375,12 +375,11 @@ En nuestro directiva.component.html lo mandaremos crearemos una una lista en la 
 
 
 
+Se despliega nuesrto produycto y ya debe de traer el arreglo 
 
 
 
-
-
-
+![html](https://user-images.githubusercontent.com/68626555/175200402-67dca6d4-b1fe-4d0a-bf03-10854b5393db.png)
 
 
 
