@@ -382,6 +382,46 @@ Se despliega nuesrto produycto y ya debe de traer el arreglo
 ![html](https://user-images.githubusercontent.com/68626555/175200402-67dca6d4-b1fe-4d0a-bf03-10854b5393db.png)
 
 
+# Directiva estructural *ngIf
+
+
+Primer o en nuetro html crearemos un booton arriba de nutro card
+
+
+       <button type="button"  class="btn btn-primary my-3">Ocultar</button>
+       
+En nuetro directiva.component crearemos un atributo que sera boleano habilitar: boolean = true; despues en nuetro html no iremos a nuestra ulo que sera lo que queremos que muestre y mostraremos un `*ngIf="habilitar == true"` a qui indicamos que siempre esta en verdadero
+
+
+![2](https://user-images.githubusercontent.com/68626555/175438043-2e0e8c73-d26f-4ced-8ffa-d31b11f84bfa.png)
+
+y crearemos un metodo que no retornara nada sera void y trraeremos el atributo habilitar y le diremos que si es verdadero tretornaremos false de lo contrario sera verdadero
+
+            setHabilitar(): void{
+              this.habilitar = (this.habilitar==true)? false: true;
+            }
+
+
+
+![1](https://user-images.githubusercontent.com/68626555/175437735-4b29bf3c-f2fa-4d4f-ae2b-e78774011710.png)
+
+mandamos llamar con nuestra instruccion click al metodo habilitar y con las llaver le dieremos que si habilitar es verdadero lo oculete en caso contrario que lo muestre 
+
+<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">{{habilitar==true? 'Ocultar': 'Mostras'}}</button>
+
+
+![3](https://user-images.githubusercontent.com/68626555/175438192-93eb18aa-79c1-4a8a-8721-635c2a823242.png)
+
+Al desplegar nuestro proyecto se mostrara a si 
+
+
+![4](https://user-images.githubusercontent.com/68626555/175438278-a275857d-d38f-4961-bc3c-e92371957004.png)
+
+y si damos click ocultara nuestra lista
+
+
+![5](https://user-images.githubusercontent.com/68626555/175438314-1ca4d2c1-9857-4e0e-9e30-6677b2e8114f.png)
+
 
 
 # Creando el componente clientes.component
