@@ -463,3 +463,60 @@ y quedara de la sigueitne manera
 Quitamos  ,styleUrls: ['./clientes.component.css'] ya que si no lo quitamos se quedara la congiruracion del css y marcara un error
 
 ![2022-05-25 20_12_24-clientes component ts — C__Users_linck_OneDrive_Documentos_GitHub_introAngular_c](https://user-images.githubusercontent.com/68626555/170394811-972c8381-dbd8-423d-8653-c0f8fd890089.png)
+
+# Listando los objetos del tipo Cliente
+
+
+En clientes component crearemos un atributo del tipo clientes y pasaremos en el arreblo Al cliente 
+
+
+        clientes: Cliente[] =[];
+
+y en nuestra clase cliente.ts ya deberemos de tener declarados los atributos que mandaremos a llamar del back en este caso
+
+            export class Cliente {
+              id: number;
+              nombre: string;
+              apellido: string;
+              createAt: string;
+              email: string;
+            }
+            
+ Para poder llamarlo hay que hacerlo desde el clientes.compoent
+
+
+![clientescomp2](https://user-images.githubusercontent.com/68626555/176059605-4a5124a1-5bc5-4229-bf4d-cf21b7ed8166.png)
+
+
+y en clientes.component.htlm creamos una tabla y buscamos el componente que se va a mandar llamar que seria nuestro tr y ingresamos nuestro *ngFor="let cliente of clientes" que cliente es como lo llamamos en nuestro html y el clientes lo traemos de nuestro componente
+
+            <div class="card border-primary mb-3" >
+              <div class="card-header ">Clientes</div>
+              <div class="card-body">
+                <h5 class="card-title text-primary">Listado de clientes!</h5>
+
+
+
+                <table class="table table-bordered table-striped text-primary">
+                  <thead>
+                    <tr>
+                      <th>id</th>
+                      <th>nombre</th>
+                      <th>apellido</th>
+                      <th>e-mail</th>
+                      <th>fecha</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr *ngFor="let cliente of clientes" class="text-primary">
+                      <td>{{cliente.id}}</td>
+                      <td>{{cliente.nombre}}</td>
+                      <td>{{cliente.apellido}}</td>
+                      <td>{{cliente.email}}</td>
+                      <td>{{cliente.createAt}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
